@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: Roles API Server
+  description: Manage Roles of a Team
+  version: 0.1
+servers:
+  - url: http://localhost:5000
+
+paths:
+    /api/role:
+        post:
+        summary: Adds a new role
+        requestBody:
+            content:
+            application/json:
+                schema:      # Request body contents
+                type: object
+                properties:
+                    team:
+                      type: string
+                    role:
+                      type: string
+                example:   # Sample object
+                    team: DevOps
+                    role: DevOpsAdmin
+        responses:
+            '200':
+            description: OK
+            content:
+                application/json:
+                schema:
+                    type: object
+                    properties:
+                        message:
+                            type: string
+                        status:
+                            type: string
+                    example:   # Sample object
+                        message: data inserted
+                        status: success
+
+    /api/role/{team}:
+        get:
+            summary: Get Roles of a team
+            parameters:
+                - in: path
+                  required: true
+                  type: string
+                  name: team 
+                  description: The user ID.
+            responses:
+                200:
+                    description: OK
+                    content:
+                        application/json:
+                        schema:
+                           type: array
+                           items:
+                              type: string
+                        example:   # Sample object
+                            [
+                                "DevOpsEng",
+                                "DevOps-Ansible",
+                                "DevOps-Teraform"
+                            ]

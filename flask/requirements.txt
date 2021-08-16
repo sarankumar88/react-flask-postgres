@@ -1,0 +1,5 @@
+flask
+gevent
+psycopg2-binary>=2.8
+sqlalchemy
+flask_cors
