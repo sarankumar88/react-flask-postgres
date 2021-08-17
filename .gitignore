@@ -1,0 +1,24 @@
+
+# dependencies
+/client/rolesui/node_modules
+/client/rolesui/.pnp
+/client/rolesui.pnp.js
+
+# testing
+/client/rolesui/coverage
+
+# production
+/client/rolesui/build
+
+# misc
+/client/rolesui/.DS_Store
+/client/rolesui/.env.local
+/client/rolesui/.env.development.local
+/client/rolesui/.env.test.local
+/client/rolesui/.env.production.local
+
+/client/rolesui/npm-debug.log*
+/client/rolesui/yarn-debug.log*
+/client/rolesui/yarn-error.log*
+
+/postgres/db/

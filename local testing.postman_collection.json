@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "853f22a8-45e4-44ab-b597-882b2aac1549",
+		"name": "local testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get Records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/role/DevOps",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"role",
+						"DevOps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"team\" : \"DevOps\",\n    \"role\" : \"DevOps-Ansible\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
